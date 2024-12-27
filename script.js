@@ -7,8 +7,6 @@ canvas.height = window.innerHeight;
 const planeImage = new Image();
 planeImage.src = "plane.png";
 
-const commerceTowerImage = new Image();
-commerceTowerImage.src = "tower.png";
 
 const plane = {
   x: 50,
