@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+
+  canvas {
+    display: block;
+    background: linear-gradient(to bottom, #87CEEB, #fff);
+  }
+
+  #game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: red;
+    display: none;
+  }
