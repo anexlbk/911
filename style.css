@@ -18,3 +18,19 @@ body {
     color: red;
     display: none;
   }
+  .tower {
+    width: 60px;
+    background: linear-gradient(to bottom, #aaa, #666);
+    border: 2px solid #333;
+  }
+  
+  .tower.top {
+    height: var(--top-height);
+  }
+  
+  .tower.bottom {
+    height: var(--bottom-height);
+    position: absolute;
+    bottom: 0;
+  }
+  

@@ -21,7 +21,7 @@ const plane = {
 };
 
 const pipes = [];
-const pipeWidth = 150;
+const pipeWidth = 100;
 const pipeGap = 200;
 let gameRunning = true;
 
@@ -40,11 +40,16 @@ function drawPlane() {
 }
 
 function drawPipes() {
-  pipes.forEach(pipe => {
-    ctx.drawImage(commerceTowerImage, pipe.x, 0, pipeWidth, pipe.topHeight);
-    ctx.drawImage(commerceTowerImage, pipe.x, canvas.height - pipe.bottomHeight, pipeWidth, pipe.bottomHeight);       
-  });
-}
+    pipes.forEach(pipe => {
+      // Top tower
+      ctx.fillStyle = "#aaa";
+      ctx.fillRect(pipe.x, 0, pipeWidth, pipe.topHeight);
+  
+      // Bottom tower
+      ctx.fillRect(pipe.x, canvas.height - pipe.bottomHeight, pipeWidth, pipe.bottomHeight);
+    });
+  }
+  
 
 function update() {
   plane.dy += plane.gravity;
